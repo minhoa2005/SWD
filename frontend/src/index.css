@@ -127,7 +127,9 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   padding: 0.625rem 0.875rem;
   font-family: inherit;
@@ -139,13 +141,17 @@ input, select, textarea {
   transition: var(--transition);
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
-input.error, select.error, textarea.error {
+input.error,
+select.error,
+textarea.error {
   border-color: var(--danger);
 }
 
@@ -521,8 +527,15 @@ input.error:focus {
 }
 
 @keyframes modal-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .modal-header {
@@ -693,7 +706,8 @@ input.error:focus {
   margin-bottom: 1.5rem;
 }
 
-.drop-zone:hover, .drop-zone.dragging {
+.drop-zone:hover,
+.drop-zone.dragging {
   border-color: var(--primary);
   background: rgba(79, 70, 229, 0.02);
 }
@@ -777,32 +791,36 @@ input.error:focus {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .form-row, .info-grid {
+
+  .form-row,
+  .info-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .filter-bar {
     flex-direction: column;
   }
-  
+
   .job-detail-header {
     flex-direction: column;
     gap: 1.5rem;
   }
-  
+
   .salary-amount {
     text-align: left;
   }
-  
+
   .main-content {
     padding-top: 4rem;
   }
-  
+
   .page-container {
     padding: 1rem;
   }
@@ -1056,6 +1074,7 @@ input.error:focus {
   .profile-page-grid {
     grid-template-columns: 1fr;
   }
+
   .profile-summary-card {
     position: static;
   }

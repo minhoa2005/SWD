@@ -27,20 +27,20 @@ export default function JobListPage() {
   return (
     <div className="page-container">
       <div className="page-hero">
-        <h1>Find Your Dream Job</h1>
+        <h1>Find Your Job</h1>
         <p>{jobs.length} opportunities waiting for you</p>
       </div>
 
       <div className="filter-bar">
         <input className="search-input" placeholder="🔍 Search by title or location..."
           value={search} onChange={e => setSearch(e.target.value)} />
-        <select value={filterType} onChange={e => setFilterType(e.target.value)}>
+        <select style={{ flex: 1 }} value={filterType} onChange={e => setFilterType(e.target.value)}>
           <option value="">All Types</option>
-          {['Full-time','Part-time','Contract','Internship','Freelance'].map(t => <option key={t}>{t}</option>)}
+          {['Full-time', 'Part-time', 'Contract', 'Internship', 'Freelance'].map(t => <option key={t}>{t}</option>)}
         </select>
-        <select value={filterMode} onChange={e => setFilterMode(e.target.value)}>
+        <select style={{ flex: 1 }} value={filterMode} onChange={e => setFilterMode(e.target.value)}>
           <option value="">All Modes</option>
-          {['On-site','Remote','Hybrid'].map(m => <option key={m}>{m}</option>)}
+          {['On-site', 'Remote', 'Hybrid'].map(m => <option key={m}>{m}</option>)}
         </select>
       </div>
 

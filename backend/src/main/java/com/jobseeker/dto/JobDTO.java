@@ -25,7 +25,7 @@ public class JobDTO {
     private String jobLocation;
 
     @NotNull(message = "Minimum salary is required")
-    @DecimalMin(value = "0.0", message = "Salary must be positive")
+    @DecimalMin(value = "0.0", inclusive = false, message = "Salary must be strictly greater than 0")
     private BigDecimal salaryMin;
 
     @NotNull(message = "Maximum salary is required")
